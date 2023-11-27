@@ -16,14 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from django.conf.urls import url, include
 from django.views.decorators.csrf import csrf_exempt
-import views
-
+from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url(r'^places/', views.PlaceList, name='placesList'),
-    url(r'^placecreate/$', csrf_exempt(views.PlaceCreate), name='placeCreate'),
+    path('places/', views.PlaceList, name='placesList'),
+    path('placecreate/', csrf_exempt(views.PlaceCreate), name='placeCreate'),
 ]
 

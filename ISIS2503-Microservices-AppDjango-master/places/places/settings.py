@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'places'
 ]
 
 MIDDLEWARE = [
@@ -80,7 +81,7 @@ DATABASES = {
         'NAME': os.environ.get("PLACES_DB", "places_db"),
         'USER': os.environ.get("PLACES_DB_USER", "places_user"),
         'PASSWORD': os.environ.get("PLACES_DB_PASSWD", "isis2503"),
-        'HOST': os.environ.get("PLACES_DB_HOST", "0.0.0.0"),
+        'HOST': os.environ.get("PLACES_DB_HOST", "34.106.173.35"),
         'PORT': os.environ.get("PLACES_DB_PORT", "5432")
     }
 }
