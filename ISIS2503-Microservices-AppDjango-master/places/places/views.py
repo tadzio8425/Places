@@ -8,7 +8,7 @@ from django.conf import settings
 import requests
 import json
 
-def PlaceList():
+def PlaceList(request):
     queryset = Place.objects.all()
     context = list(queryset.values('id', 'name'))
     return JsonResponse(context, safe=False)
